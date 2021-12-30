@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="EurekaServer" />
+        <module name="User-Provider" />
+        <module name="Eureka-Provider" />
+        <module name="Eureka-Provider-1" />
+        <module name="User-consumer" />
+        <module name="userAPI" />
+        <module name="User-Provider1" />
+        <module name="demo" />
+        <module name="Eureka-Consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="Eureka-Consumer" target="1.8" />
+      <module name="Eureka-Provider" target="1.8" />
+      <module name="Eureka-Provider-1" target="1.8" />
+      <module name="Eureka-Server" target="1.5" />
+      <module name="EurekaServer" target="1.8" />
+      <module name="User-consumer" target="1.8" />
+      <module name="User-Provider" target="1.8" />
+      <module name="User-Provider1" target="1.8" />
+      <module name="userAPI" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Eureka-Consumer" options="-parameters" />
+      <module name="Eureka-Provider" options="-parameters" />
+      <module name="Eureka-Provider-1" options="-parameters" />
+      <module name="EurekaServer" options="-parameters" />
+      <module name="User-Provider" options="-parameters" />
+      <module name="User-Provider1" options="-parameters" />
+      <module name="User-consumer" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="userAPI" options="-parameters" />
+    </option>
+  </component>
+</project>

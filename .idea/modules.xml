@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Eureka-Consumer/Eureka-Consumer.iml" filepath="$PROJECT_DIR$/Eureka-Consumer/Eureka-Consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eureka-Provider/Eureka-Provider.iml" filepath="$PROJECT_DIR$/Eureka-Provider/Eureka-Provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eureka-Provider-1/Eureka-Provider-1.iml" filepath="$PROJECT_DIR$/Eureka-Provider-1/Eureka-Provider-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EurekaServer/EurekaServer.iml" filepath="$PROJECT_DIR$/EurekaServer/EurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User-Provider/User-Provider.iml" filepath="$PROJECT_DIR$/User-Provider/User-Provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User-Provider1/User-Provider1.iml" filepath="$PROJECT_DIR$/User-Provider1/User-Provider1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User-consumer/User-consumer.iml" filepath="$PROJECT_DIR$/User-consumer/User-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/userAPI/userAPI.iml" filepath="$PROJECT_DIR$/userAPI/userAPI.iml" />
+    </modules>
+  </component>
+</project>
