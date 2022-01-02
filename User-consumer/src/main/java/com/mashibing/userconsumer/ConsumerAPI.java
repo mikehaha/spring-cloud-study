@@ -56,6 +56,13 @@ public interface ConsumerAPI extends UserAPI {
     @GetMapping("/getMap3")
     Map<String, String> getMap3(@RequestParam Map<String, String> map);
 
+    /**
+     *  2022年1月2日08:31:57
+     * 下面的这些   @PostMapping("/postPerson")  和  @RequestBody Person person  主要是为了提供给Feign ，
+     *  用于拼接请求的URL，提供给Feign 使用
+     * @param person
+     * @return
+     */
     @PostMapping("/postPerson")
     public Person postPerson(@RequestBody Person person);
 }

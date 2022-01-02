@@ -1,0 +1,18 @@
+##
+#feign:
+#  client:
+#    config:
+#      #这里填具体的服务名称（也可以填default，表示对所有服务生效）
+#      default:
+#        #connectTimeout和readTimeout这两个得一起配置才会生效
+#        connectTimeout: 1000
+#        readTimeout: 4000
+# ribbon 的超时机制，当服务要请求一个服务时，若此服务请求超时，则会自动请求另外一个eurake 集群中的服务器，这就是重试机制
+#  若同一个服务多次被请求超时，或者错误，那么 ribbon 会在一定时间内部在请求这个服务器。
+# 下面试定义的链接超时和读取超时配置，但是在本机没有生效，不知道什么原因。----2022年1月2日23:21:59
+ribbon:
+  connectTimeout: 1000
+  readTimeout: 3000
+logging:
+  level:
+    root: debug

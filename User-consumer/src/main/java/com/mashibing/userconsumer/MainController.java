@@ -81,16 +81,21 @@ public class MainController implements UserAPI {
     }
 
     /**
-     *  ----------------带检查问题原因--------------------
-     * @param person
+     *
+     *  URL: http://localhost:7003/postPerson?name=mike&id=1
+     *  返回记录：  {"id":"1--------我的端口是=7004","name":"mike-----我的端口是=7004"}
+     * @param
+     * @param map
      * @return
      */
-    @PostMapping("/postPerson")
-    public Person postPerson(@RequestBody Person person){
-//        String id = map.get("id").toString();
-//        String name = map.get("name").toString();
-//        Person person = new Person(id, name);
+    @GetMapping("/postPerson")
+    public Person postPerson(@RequestParam Map map){
+        String id = map.get("id").toString();
+        String name = map.get("name").toString();
+        Person person = new Person(id, name);
         return consumerAPI.postPerson(person);
+//        return person;
     }
+
 
 }

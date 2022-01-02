@@ -2,6 +2,7 @@ package com.mashibing.userapi;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
 
 public interface UserAPI {
 
@@ -20,7 +21,5 @@ public interface UserAPI {
     @GetMapping("/getMap")
     public String getMap(@RequestParam(name="name") String name);
 
-    @PostMapping("/postPerson")
-    public Person postPerson(@RequestBody Person person);
 
 }

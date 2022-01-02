@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @RestController
 public class UserProvider implements UserAPI {
@@ -14,9 +15,19 @@ public class UserProvider implements UserAPI {
     @Value("${server.port}")
     String port;
 
+    private AtomicInteger atomicInteger = new AtomicInteger(1);
+
+
     public String alive(){
-        System.out.println("调用 UserProvider--> alive");
-        return "ok "+port;
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        int i = atomicInteger.incrementAndGet();
+        System.out.println("调用 UserProvider--> alive,第"+i+"次调用， 端口是="+port);
+        return "ok "+port+" 第"+i+"次调用哦";
     }
 
     public String getScore() {
@@ -39,13 +50,7 @@ public class UserProvider implements UserAPI {
         return  name+" get map";
     }
 
-    @Override
-    public Person postPerson(Person person) {
-        Person p = new Person();
-        p.setId(person.getId()+"--------");
-        p.setName(person.getName()+"-----");
-        return p;
-    }
+
 
     @RequestMapping("/getMap2/{name}")
     public String getMap2(@PathVariable("name") String name){
@@ -73,5 +78,12 @@ public class UserProvider implements UserAPI {
     @GetMapping("/getMap3")
     public Map<String, String> getMap3(@RequestParam Map<String, String> map){
         return map;
+    }
+    @PostMapping("/postPerson")
+    public Person postPerson(@RequestBody Person person) {
+        Person p = new Person();
+        p.setId(person.getId()+"--------我的端口是="+port);
+        p.setName(person.getName()+"-----我的端口是="+port);
+        return p;
     }
 }
