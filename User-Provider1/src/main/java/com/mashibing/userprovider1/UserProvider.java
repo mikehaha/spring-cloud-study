@@ -18,6 +18,8 @@ public class UserProvider implements UserAPI {
 
     public String alive(){
 
+        int a=1/0;
+
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {

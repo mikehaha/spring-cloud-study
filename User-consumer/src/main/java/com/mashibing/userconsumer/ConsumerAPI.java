@@ -25,8 +25,9 @@ import java.util.Map;
  */
 
 //@FeignClient(name = "abc",url = "http://localhost:7002")
-
-@FeignClient(name = "User-Provider")
+// fallback , 容错机制，是在客户端执行，与服务端无关，谁调用，谁负责，在 当前类和父类的所有方法，异常都会调用UserProviderBack中
+//@FeignClient(name = "User-Provider",fallback = UserProviderBack.class)
+@FeignClient(name = "User-Provider",fallbackFactory = UserProviderBackFactory.class)
 public interface ConsumerAPI extends UserAPI {
     /**
      *

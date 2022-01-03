@@ -2,6 +2,8 @@ package com.mashibing.userconsumer;
 
 import com.mashibing.userapi.Person;
 import com.mashibing.userapi.UserAPI;
+import com.netflix.discovery.converters.Auto;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,10 +15,30 @@ public class MainController implements UserAPI {
     @Autowired
     ConsumerAPI consumerAPI;
 
+    @Autowired
+    RestService service;
+
+    /**
+     *  URL: http://localhost:7003/alive2
+     *  请求这个接口，alive2,
+     *      1. 如果调用到的服务正常相应，那么就会正常返回，
+     *      2. 如果调用服务有问题，那么就会调用  RestService--》alive--》@HystrixCommand(fallbackMethod = "back") 的方法
+     *
+     * @return
+     */
+    @GetMapping("/alive2")
+    public String alive2(){
+
+        return  service.alive();
+    }
+
     //-- http://localhost:7003/alive
     public String alive(){
+
         return  consumerAPI.alive();
     }
+
+
 
     public String getScore() {
 
@@ -96,6 +118,4 @@ public class MainController implements UserAPI {
         return consumerAPI.postPerson(person);
 //        return person;
     }
-
-
 }

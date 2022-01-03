@@ -13,6 +13,6 @@
 ribbon:
   connectTimeout: 1000
   readTimeout: 3000
-logging:
-  level:
-    root: debug
+#logging:
+#  level:
+#    root: debug

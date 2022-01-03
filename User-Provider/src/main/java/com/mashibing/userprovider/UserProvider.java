@@ -17,14 +17,21 @@ public class UserProvider implements UserAPI {
 
     private AtomicInteger atomicInteger = new AtomicInteger(1);
 
-
+    /**
+     *  如果打开了histrix 服务后，会自动降级到其他页面上
+     *
+     *  http://localhost:7003/alive ，
+     * @return
+     */
     public String alive(){
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        int a=1/0;
+
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         int i = atomicInteger.incrementAndGet();
         System.out.println("调用 UserProvider--> alive,第"+i+"次调用， 端口是="+port);
         return "ok "+port+" 第"+i+"次调用哦";
