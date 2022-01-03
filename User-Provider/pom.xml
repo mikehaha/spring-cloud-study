@@ -19,13 +19,11 @@
     </properties>
     <dependencies>
 
-        <!--        引入自定义的API 值-->
+        <!--        引入自定义的API 值，在这个类中定义的接口，被引入到此项目中-->
         <dependency>
             <groupId>com.mashibing</groupId>
             <artifactId>userAPI</artifactId>
         </dependency>
-
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

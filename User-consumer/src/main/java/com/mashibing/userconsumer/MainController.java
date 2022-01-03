@@ -2,8 +2,6 @@ package com.mashibing.userconsumer;
 
 import com.mashibing.userapi.Person;
 import com.mashibing.userapi.UserAPI;
-import com.netflix.discovery.converters.Auto;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,41 +30,66 @@ public class MainController implements UserAPI {
         return  service.alive();
     }
 
-    //-- http://localhost:7003/alive
+    /**
+     *  URL: http://localhost:7003/alive
+     *  调用这个类，因为 consumerAPI 带有FeignClient 注解，会自动执行负载均衡，同时有 fallbackFactory，如果调用失败
+     *  会使用失败的页面。
+     * @return
+     */
     public String alive(){
 
         return  consumerAPI.alive();
     }
 
 
-
+    // http://localhost:7003/getScore
     public String getScore() {
 
         return consumerAPI.getScore();
     }
 
+    //http://localhost:7003/addOil
     @Override
     public String addOil() {
         System.out.println("addOil--------------");
         return consumerAPI.addOil();
     }
 
-    @Override
+    /**
+     *  URL: http://localhost:7003/goHome?name=mike
+     *  如果有请求参数，使用 ？name=mike
+     * @param name
+     * @return
+     */
     public String goHome( String name) {
         return consumerAPI.goHome(name);
     }
 
+    /**
+     * URL: http://localhost:7003/getMap?name=mike
+     * 返回值： mike get map
+     * @param name
+     * @return
+     */
     @Override
     public String getMap(String name) {
         return consumerAPI.getMap(name);
     }
 
-    //http://localhost:7003/testLocal
+    /**
+     *  URL: http://localhost:7003/testLocal
+     *  返回值：this is testLocal, 测试端口7002
+     * @return
+     */
     @GetMapping("/testLocal")
     public String testLocal() {
         return consumerAPI.testLocal();
     }
 
+    /**
+     * http://localhost:7003/map
+     * @return
+     */
     @GetMapping("/map")
     public String map() {
         return consumerAPI.map();
@@ -83,7 +106,7 @@ public class MainController implements UserAPI {
      * @return
      */
     @GetMapping("/getMap2")
-    public Map<Integer, String> map(Integer id, String name) {
+    public Map<Integer, String> map(@RequestParam("id") Integer id, @RequestParam("name") String name) {
         return consumerAPI.getMap2(id,name);
     }
 

@@ -51,8 +51,13 @@ public class UserProvider implements UserAPI {
     }
 
 
-
-
+    /**
+     * http://localhost:7004/getMap2/123
+     *
+     *
+     * @param name
+     * @return
+     */
     @RequestMapping("/getMap2/{name}")
     public String getMap2(@PathVariable("name") String name){
         return  name+" get map";

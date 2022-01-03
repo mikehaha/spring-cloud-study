@@ -57,8 +57,6 @@ public class UserProvider implements UserAPI {
         return  name+" get map";
     }
 
-
-
     @RequestMapping("/getMap2/{name}")
     public String getMap2(@PathVariable("name") String name){
         return  name+" get map";

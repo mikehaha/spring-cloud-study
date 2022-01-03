@@ -12,7 +12,10 @@ public class RestService {
     RestTemplate template;
 
 
-    // 发起请求
+    /**
+     *  fallbackMethod 失败时调用的方法
+     * @return
+     */
     @HystrixCommand(fallbackMethod = "back")
     public String alive() {
         String url="http://User-Provider/alive";

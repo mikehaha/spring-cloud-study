@@ -23,8 +23,4 @@ public class EurekaConsumerApplication {
         SpringApplication.run(EurekaConsumerApplication.class, args);
     }
 
-
-
-
-
 }

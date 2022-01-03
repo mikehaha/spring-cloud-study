@@ -2,11 +2,10 @@ package com.mashibing.eurekaconsumer;
 
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -81,14 +80,10 @@ public class MainController {
         return "请求的URL 是"+url+"\n ; 返回结果是"+forObject;
     }
 
-
-
     @RequestMapping("/loadBalancer3")
     public String loadBalancerClientTest3(){
         String url ="http://provider/getHi";
-
         String respStr = restTemplate.getForObject(url, String.class);
-
         return respStr;
     }
 }
