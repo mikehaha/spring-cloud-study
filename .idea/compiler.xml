@@ -8,16 +8,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="EurekaServer" />
         <module name="User-Provider" />
+        <module name="admin-test" />
         <module name="Eureka-Provider" />
         <module name="Eureka-Provider-1" />
         <module name="User-consumer" />
         <module name="userAPI" />
+        <module name="zuul-test" />
         <module name="User-Provider1" />
         <module name="demo" />
         <module name="Eureka-Consumer" />
+        <module name="config-center" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin-test" target="1.8" />
+      <module name="config-center" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="Eureka-Consumer" target="1.8" />
       <module name="Eureka-Provider" target="1.8" />
@@ -28,6 +33,8 @@
       <module name="User-Provider" target="1.8" />
       <module name="User-Provider1" target="1.8" />
       <module name="userAPI" target="1.8" />
+      <module name="zuul-test" target="1.8" />
+      <module name="zuultest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -39,8 +46,12 @@
       <module name="User-Provider" options="-parameters" />
       <module name="User-Provider1" options="-parameters" />
       <module name="User-consumer" options="-parameters" />
+      <module name="admin-test" options="-parameters" />
+      <module name="config-center" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="userAPI" options="-parameters" />
+      <module name="zuul-test" options="-parameters" />
+      <module name="zuultest" options="-parameters" />
     </option>
   </component>
 </project>

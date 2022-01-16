@@ -9,9 +9,12 @@
       <module fileurl="file://$PROJECT_DIR$/User-Provider/User-Provider.iml" filepath="$PROJECT_DIR$/User-Provider/User-Provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/User-Provider1/User-Provider1.iml" filepath="$PROJECT_DIR$/User-Provider1/User-Provider1.iml" />
       <module fileurl="file://$PROJECT_DIR$/User-consumer/User-consumer.iml" filepath="$PROJECT_DIR$/User-consumer/User-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin-test/admin-test.iml" filepath="$PROJECT_DIR$/admin-test/admin-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-center/config-center.iml" filepath="$PROJECT_DIR$/config-center/config-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
       <module fileurl="file://$PROJECT_DIR$/userAPI/userAPI.iml" filepath="$PROJECT_DIR$/userAPI/userAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-test/zuul-test.iml" filepath="$PROJECT_DIR$/zuul-test/zuul-test.iml" />
     </modules>
   </component>
 </project>

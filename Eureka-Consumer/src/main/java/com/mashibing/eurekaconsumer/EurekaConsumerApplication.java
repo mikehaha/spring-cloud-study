@@ -23,4 +23,10 @@ public class EurekaConsumerApplication {
         SpringApplication.run(EurekaConsumerApplication.class, args);
     }
 
+    @Bean
+    @LoadBalanced
+    RestTemplate getRestTemplate(){
+        RestTemplate restTemplate =new RestTemplate();
+        return restTemplate;
+    }
 }

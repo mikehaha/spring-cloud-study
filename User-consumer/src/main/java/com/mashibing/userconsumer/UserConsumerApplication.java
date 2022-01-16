@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableFeignClients    // 打开Feign 的客户端功能，多个客户端
-@EnableHystrix // 打开断路器 for Hystrix,Feign 是自带断路器，如果用Restemplate, 需要带上这个值
+@EnableHystrix // 打开断路器 for Hystrix,Feign 是自带断路器,这个注解包含了 @EnableCircuitBreaker
 @EnableHystrixDashboard // 开启断路器的面板
 public class UserConsumerApplication {
 

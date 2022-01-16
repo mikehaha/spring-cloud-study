@@ -32,6 +32,11 @@ public class UserProvider implements UserAPI {
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
+//        try {
+//            Thread.sleep(3000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         int i = atomicInteger.incrementAndGet();
         System.out.println("调用 UserProvider--> alive,第"+i+"次调用， 端口是="+port);
         return "ok "+port+" 第"+i+"次调用哦";

@@ -10,6 +10,11 @@ import java.util.Map;
 @RestController
 public class MainController implements UserAPI {
 
+    static {
+        int abc=1;
+        System.out.println("hello................");
+    }
+
     @Autowired
     ConsumerAPI consumerAPI;
 
@@ -22,11 +27,12 @@ public class MainController implements UserAPI {
      *      1. 如果调用到的服务正常相应，那么就会正常返回，
      *      2. 如果调用服务有问题，那么就会调用  RestService--》alive--》@HystrixCommand(fallbackMethod = "back") 的方法
      *
-     * @return
+     *  或者使用下面的组合也可以达到失败调用方法的目的
+     *    @GetMapping("/testFallback")
+     *     @HystrixCommand(fallbackMethod = "testFallbackMethod")
      */
     @GetMapping("/alive2")
     public String alive2(){
-
         return  service.alive();
     }
 
@@ -141,4 +147,6 @@ public class MainController implements UserAPI {
         return consumerAPI.postPerson(person);
 //        return person;
     }
+
+
 }
