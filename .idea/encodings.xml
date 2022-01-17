@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/Eureka-Consumer-1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka-Consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka-Provider-1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka-Provider/src/main/java" charset="UTF-8" />
@@ -15,6 +14,8 @@
     <file url="file://$PROJECT_DIR$/User-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-test/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/csrf-1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/csrf-2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/userAPI/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul-test/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
